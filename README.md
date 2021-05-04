@@ -3,7 +3,7 @@
 [![npm](https://img.shields.io/npm/dm/val-loader-modernizr.svg?style=flat-square)](https://www.npmjs.com/package/val-loader-modernizr)
 [![license](https://img.shields.io/github/license/cascornelissen/val-loader-modernizr.svg?style=flat-square)](LICENSE.md)
 
-This configuration is meant to be used in conjunction with [`val-loader`](npmjs.com/package/val-loader) and will compile
+This configuration is meant to be used in conjunction with [`val-loader`](https://www.npmjs.com/package/val-loader) and will compile
 a custom [Modernizr](https://modernizr.com/) build based on a [configuration file](https://github.com/Modernizr/Modernizr/blob/master/lib/config-all.json)
 that has to be provided.
 
@@ -19,7 +19,7 @@ npm install val-loader-modernizr val-loader modernizr --save-dev
 
 ## Usage
 **Webpack configuration**  
-Add a module rule to the Webpack configuration using [`val-loader`](npmjs.com/package/val-loader) as the loader with the [`executableFile`](https://github.com/webpack-contrib/val-loader#executableFile) option set to `val-loader-modernizr`.
+Add a module rule to the Webpack configuration using [`val-loader`](https://www.npmjs.com/package/val-loader) as the loader with the [`executableFile`](https://github.com/webpack-contrib/val-loader#executableFile) option set to `val-loader-modernizr`.
 
 ```js
 module.exports = {
