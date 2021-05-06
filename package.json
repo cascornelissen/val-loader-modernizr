@@ -1,6 +1,6 @@
 {
     "name": "val-loader-modernizr",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Generates custom Modernizr builds via val-loader",
     "main": "lib/index.js",
     "homepage": "https://github.com/cascornelissen/val-loader-modernizr",
