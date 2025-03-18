@@ -1,1 +1,7 @@
 /node_modules
+/examples/*/dist
+/dist
+index.js
+index.d.ts
+source/**/*.js
+source/**/*.d.ts

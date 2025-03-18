@@ -1,7 +1,0 @@
-{
-    "enableClasses": true,
-    "minify": true,
-    "feature-detects": [
-        "a/download"
-    ]
-}

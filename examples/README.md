@@ -1,7 +1,9 @@
 # Examples
-This directory includes basic examples on how you could use `val-loader-modernizr`. You can run these examples yourself by cloning the repository, navigating to one of the example directories and running the `webpack` or `webpack-dev-server` command from there.
+This directory includes some examples on how `val-loader-modernizr` can be used. To run an example, clone this
+repository, navigate to the example's directory and execute the following commands.
 
 ```shell
-$ cd examples/<example>
-$ ../../node_modules/.bin/webpack
+npm clean-install && \
+npm run build && \
+npm exec -- webpack
 ```

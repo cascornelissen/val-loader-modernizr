@@ -7,22 +7,23 @@ This configuration is meant to be used in conjunction with [`val-loader`][npm-va
 a custom [Modernizr][modernizr] build based on a [configuration file][modernizr-configuration]
 that has to be provided.
 
-The setup is based on [the official documentation][webpack-docs-val-loader-modernizr] and doesn't include 
-`modernizr` or `val-loader` as dependencies, allowing you to use any supported version.
+The setup is based on [the official documentation][webpack-docs-val-loader-modernizr] and includes 
+`modernizr` and `val-loader` as peer dependencies, allowing you to use any supported version.
 
 
 ## Installation
 ```shell
-npm install val-loader-modernizr val-loader modernizr --save-dev
+npm install val-loader-modernizr --save-dev
 ```
 
 
 ## Usage
 **Webpack configuration**  
-Add a module rule to the Webpack configuration using [`val-loader`][npm-val-loader] as the loader with the [`executableFile`][val-loader-executable-file] option set to `val-loader-modernizr`.
+Add a module rule to the Webpack configuration using [`val-loader`][npm-val-loader] as the loader with the
+[`executableFile`][val-loader-executable-file] option set to `val-loader-modernizr`.
 
 ```js
-module.exports = {
+export default {
     module: {
         rules: [{
             test: /\.modernizrrc$/,
@@ -39,6 +40,7 @@ module.exports = {
 
 **Modernizr configuration**  
 Create a [Modernizr configuration file][modernizr-configuration] and enable the options and feature detects that are needed.
+
 ```json
 {
     "enableClasses": true,
@@ -51,6 +53,7 @@ Create a [Modernizr configuration file][modernizr-configuration] and enable the 
 
 **Importing**  
 Import the file where needed, the loader will take care of compiling a build and injecting it into the bundle.
+
 ```
 import './.modernizrrc';
 ```
