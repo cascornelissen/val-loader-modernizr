@@ -1,6 +1,6 @@
 {
     "name": "val-loader-modernizr",
-    "version": "1.0.1",
+    "version": "2.0.0",
     "description": "Generates custom Modernizr builds via val-loader",
     "homepage": "https://github.com/cascornelissen/val-loader-modernizr",
     "license": "MIT",
