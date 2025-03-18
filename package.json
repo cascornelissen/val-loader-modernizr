@@ -30,7 +30,7 @@
     "scripts": {
         "build": "tsc",
         "lint": "eslint '**/*.ts' --ignore-pattern '**/*.d.ts'",
-        "test": "tsx --test 'source/test.ts'",
+        "test": "npm run build && tsx --test 'source/test.ts'",
         "prepack": "npm run build && npm run lint && npm run test",
         "postpack": "rimraf --glob 'source/**/*.js' 'source/**/*.d.ts'"
     },

@@ -54,7 +54,7 @@ Create a [Modernizr configuration file][modernizr-configuration] and enable the 
 **Importing**  
 Import the file where needed, the loader will take care of compiling a build and injecting it into the bundle.
 
-```
+```js
 import './.modernizrrc';
 ```
 
