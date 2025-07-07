@@ -32,7 +32,8 @@
         "lint": "eslint '**/*.ts' --ignore-pattern '**/*.d.ts'",
         "test": "npm run build && tsx --test 'source/test.ts'",
         "prepack": "npm run build && npm run lint && npm run test",
-        "postpack": "rimraf --glob 'source/**/*.js' 'source/**/*.d.ts'"
+        "postpack": "rimraf --glob 'source/**/*.js' 'source/**/*.d.ts'",
+        "prepare": "husky"
     },
     "files": [
         "index.js",
@@ -42,6 +43,7 @@
     ],
     "devDependencies": {
         "@onefinity/eslint-config": "^3.3.0",
+        "husky": "^9.1.7",
         "rimraf": "^6.0.1",
         "tsx": "^4.20.3",
         "typescript": "^5.8.3",
