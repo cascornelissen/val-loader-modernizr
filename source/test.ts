@@ -46,7 +46,7 @@ describe('Executable', () => {
         }));
 
         webpack(options, (errors, stats) => {
-            const bundle = fs.readFileSync(path.resolve(stats!.compilation.compiler.outputPath.toString(), 'main.js'), 'utf8'); // eslint-disable-line @typescript-eslint/no-non-null-assertion
+            const bundle = fs.readFileSync(path.resolve(stats!.compilation.compiler.outputPath, 'main.js'), 'utf8'); // eslint-disable-line @typescript-eslint/no-non-null-assertion
 
             assert.match(bundle, MODERNIZR_CUSTOM_BUILD_DETECTION_REGEX);
             assert.match(bundle, /adownload/);
@@ -61,7 +61,7 @@ describe('Executable', () => {
         fs.writeFileSync(MODERNIZR_CONFIGURATION_PATH, '');
 
         webpack(options, (errors, stats) => {
-            const bundle = fs.readFileSync(path.resolve(stats!.compilation.compiler.outputPath.toString(), 'main.js'), 'utf8'); // eslint-disable-line @typescript-eslint/no-non-null-assertion
+            const bundle = fs.readFileSync(path.resolve(stats!.compilation.compiler.outputPath, 'main.js'), 'utf8'); // eslint-disable-line @typescript-eslint/no-non-null-assertion
 
             assert.match(bundle, MODERNIZR_CUSTOM_BUILD_DETECTION_REGEX);
             assert.doesNotMatch(bundle, /adownload/);
@@ -76,7 +76,7 @@ describe('Executable', () => {
         fs.writeFileSync(MODERNIZR_CONFIGURATION_PATH, 'invalid-json');
 
         webpack(options, (errors, stats) => {
-            const bundle = fs.readFileSync(path.resolve(stats!.compilation.compiler.outputPath.toString(), 'main.js'), 'utf8'); // eslint-disable-line @typescript-eslint/no-non-null-assertion
+            const bundle = fs.readFileSync(path.resolve(stats!.compilation.compiler.outputPath, 'main.js'), 'utf8'); // eslint-disable-line @typescript-eslint/no-non-null-assertion
 
             assert.match(bundle, /Module build failed/);
             assert.doesNotMatch(bundle, MODERNIZR_CUSTOM_BUILD_DETECTION_REGEX);
