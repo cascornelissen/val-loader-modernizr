@@ -30,10 +30,10 @@
     "scripts": {
         "build": "tsc",
         "lint": "eslint '**/*.ts' --ignore-pattern '**/*.d.ts'",
-        "test": "npm run build && tsx --test 'source/test.ts'",
+        "test": "npm run build && tsx --experimental-test-coverage --test 'source/test.ts'",
         "prepack": "npm run build && npm run lint && npm run test",
         "postpack": "rimraf --glob 'source/**/*.js' 'source/**/*.d.ts'",
-        "prepare": "husky"
+        "prepare": "husky && npm run build"
     },
     "files": [
         "index.js",
@@ -42,15 +42,16 @@
         "source/**/*.d.ts"
     ],
     "devDependencies": {
-        "@onefinity/eslint-config": "^3.6.1",
+        "@onefinity/eslint-config": "^3.7.0",
+        "@types/node": "^24.12.2",
         "husky": "^9.1.7",
         "rimraf": "^6.1.3",
         "tsx": "^4.21.0",
-        "typescript": "^5.9.3",
         "webpack-cli": "^7.0.2"
     },
     "peerDependencies": {
         "modernizr": "^3.0.0",
+        "typescript": "^4.0.0 || ^5.0.0 || ^6.0.0",
         "val-loader": "^3.1.0 || ^4.0.0 || ^5.0.0 || ^6.0.0",
         "webpack": "^5.0.0"
     },
