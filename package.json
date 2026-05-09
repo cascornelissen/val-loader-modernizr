@@ -42,7 +42,7 @@
         "source/**/*.d.ts"
     ],
     "devDependencies": {
-        "@onefinity/eslint-config": "^3.7.0",
+        "@onefinity/eslint-config": "^3.7.1",
         "@types/node": "^24.12.2",
         "husky": "^9.1.7",
         "rimraf": "^6.1.3",
