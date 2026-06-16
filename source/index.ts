@@ -1,6 +1,6 @@
 import fs from 'node:fs';
-import webpack from 'webpack';
 import modernizr from 'modernizr';
+import type webpack from 'webpack';
 
 const executable = (options: unknown, context: webpack.LoaderContext<unknown>) => {
     return new Promise((resolve, reject) => {

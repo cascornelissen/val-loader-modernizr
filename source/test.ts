@@ -4,7 +4,7 @@ import path from 'node:path';
 import assert from 'node:assert';
 import webpack from 'webpack';
 import { rimraf } from 'rimraf';
-import { describe, it, afterEach } from 'node:test';
+import { afterEach, describe, it } from 'node:test';
 
 const MODERNIZR_CONFIGURATION_PATH = path.resolve(os.tmpdir(), '.modernizrrc');
 const MODERNIZR_CUSTOM_BUILD_DETECTION_REGEX = /https:\/\/modernizr.com\/download/;
